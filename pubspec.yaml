@@ -1,5 +1,5 @@
 name: osenv
-description: "Get and set environment variables by calling native OS functions."
+description: Get and set environment variables by calling native OS functions.
 version: 1.0.0
 homepage: https://github.com/hipercompl/osenv
 repository: https://github.com/hipercompl/osenv
