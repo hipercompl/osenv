@@ -4,6 +4,7 @@ version: 1.0.0
 homepage: https://github.com/hipercompl/osenv
 repository: https://github.com/hipercompl/osenv
 issue_tracker: https://github.com/hipercompl/osenv/issues
+topics: environment variables
 
 screenshots:
   - description: A demo application manipulating environment variables.
