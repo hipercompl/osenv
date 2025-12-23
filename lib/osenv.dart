@@ -32,7 +32,9 @@ String? getEnv(String name) {
     }
     return varVal.cast<Utf8>().toDartString();
   } finally {
-    malloc.free(namePtr);
+    if (namePtr != nullptr) {
+      malloc.free(namePtr);
+    }
   }
 }
 
@@ -49,8 +51,12 @@ bool setEnv(String name, String value) {
     final res = _bindings.set_env(namePtr.cast(), valuePtr.cast());
     return res == 0;
   } finally {
-    malloc.free(namePtr);
-    malloc.free(valuePtr);
+    if (namePtr != nullptr) {
+      malloc.free(namePtr);
+    }
+    if (valuePtr != nullptr) {
+      malloc.free(valuePtr);
+    }
   }
 }
 
@@ -65,7 +71,9 @@ bool unsetEnv(String name) {
     final res = _bindings.unset_env(namePtr.cast());
     return res == 0;
   } finally {
-    malloc.free(namePtr);
+    if (namePtr != nullptr) {
+      malloc.free(namePtr);
+    }
   }
 }
 
